@@ -1,38 +1,22 @@
 "use client";
 
-import { ReactElement } from "react";
 import {
   Box,
   SimpleGrid,
   Icon,
   Text,
   Stack,
-  Flex,
   Container,
 } from "@chakra-ui/react";
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
 
 interface FeatureProps {
   title: string;
   text: string;
-  icon: ReactElement;
 }
 
-const Feature = ({ title, text, icon }: FeatureProps) => {
+const Feature = ({ title, text }: FeatureProps) => {
   return (
     <Stack>
-      <Flex
-        w={16}
-        h={16}
-        align={"center"}
-        justify={"center"}
-        color={"white"}
-        rounded={"full"}
-        bg={"gray.100"}
-        mb={1}
-      >
-        {icon}
-      </Flex>
       <Text fontWeight={600}>{title}</Text>
       <Text color={"gray.600"}>{text}</Text>
     </Stack>
@@ -41,32 +25,44 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
   return (
-    <Container maxW={"5xl"} py={12}>
-      <Box>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-          <Feature
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            title={"Lifetime Support"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-          <Feature
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            title={"Unlimited Donations"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-          <Feature
-            icon={<Icon as={FcInTransit} w={10} h={10} />}
-            title={"Instant Delivery"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-        </SimpleGrid>
-      </Box>
-    </Container>
+    <Box>
+      <Text
+        as={Container}
+        maxW={"3xl"}
+        textAlign={"center"}
+        fontWeight={"bold"}
+        fontSize={{ base: "xl", sm: "3xl" }}
+      >
+        Our Core Objectives
+      </Text>
+      <Container maxW={"5xl"} py={12}>
+        <Box>
+          <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
+            <Feature
+              title={"Specialized Training"}
+              text={
+                "Our guards undergo specialized training, ensuring they meet your unique security needs."
+              }
+            />
+            <Feature
+              title={"Client Satisfaction"}
+              text={"Value-added services that promise peace of mind."}
+            />
+            <Feature
+              title={"Tech Integration"}
+              text={
+                "Modernizing operations with the latest security technology tools."
+              }
+            />
+            <Feature
+              title={"Elite Workforce"}
+              text={
+                "Maintaining a workforce of the highest quality, trained extensively and primed for physical challenges."
+              }
+            />
+          </SimpleGrid>
+        </Box>
+      </Container>
+    </Box>
   );
 }

@@ -14,36 +14,46 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 
 // Replace test data with your own
-const features = Array.apply(null, Array(8)).map(function (x, i) {
-  return {
-    id: i,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  };
-});
+const clienteles = [
+  "Aviation sector",
+  "Recreation centres",
+  "Embassies",
+  "Small, Medium & Large businesses",
+  "Hospitality sector",
+  "Oil & Gas sector",
+  "Schools",
+  "Local Councils",
+  "Restaurants",
+  "	Government Agencies",
+  "	Telecommunications sector",
+  "	Fuel stations",
+  "	Construction sites",
+  "	Private residences ",
+  "	Estates",
+  "	Hospitals",
+  "	Special events",
+];
 
 export default function GridListWithHeading() {
   return (
     <Box px="10" py="20">
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={"3xl"}>This is the headline</Heading>
+        <Heading fontSize={"3xl"}>Our Trusted Clientele</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          From the aviation sector to special events, we proudly serve a diverse
+          range of clients. Discover who trusts 365 Security.
         </Text>
       </Stack>
 
       <Container maxW={"6xl"} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
-          {features.map((feature) => (
-            <HStack key={feature.id} align={"top"}>
+          {clienteles.map((cli, idx) => (
+            <HStack key={idx} align={"top"}>
               <Box color={"green.400"} px={2}>
                 <Icon as={CheckIcon} />
               </Box>
               <VStack align={"start"}>
-                <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={"gray.600"}>{feature.text}</Text>
+                <Text fontWeight={600}>{cli}</Text>
               </VStack>
             </HStack>
           ))}

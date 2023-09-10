@@ -13,9 +13,9 @@ export default function Hero() {
   return (
     <Flex
       w={"full"}
-      h={"100vh"}
+      h={"calc(100vh - 4rem)"}
       backgroundImage={
-        "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+        "https://plus.unsplash.com/premium_photo-1683134544686-c7d3e23d1e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       }
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
@@ -26,32 +26,31 @@ export default function Hero() {
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
-        <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
+        <Stack maxW={"2xl"} align={"flex-start"} spacing={5}>
           <Text
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            fontSize={useBreakpointValue({ base: "3xl", md: "5xl" })}
           >
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-            eiusmod tempor
+            Professional Security Services You Can Trust
+          </Text>
+          <Text
+            color={"white"}
+            fontWeight={"medium"}
+            lineHeight={1.2}
+            fontSize={useBreakpointValue({ base: "xl", md: "2xl" })}
+          >
+            Over four decades of unparalleled expertise in security solutions
           </Text>
           <Stack direction={"row"}>
-            <Button
-              bg={"blue.400"}
-              rounded={"full"}
-              color={"white"}
-              _hover={{ bg: "blue.500" }}
-            >
-              Show me more
-            </Button>
             <Button
               bg={"whiteAlpha.300"}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "whiteAlpha.500" }}
             >
-              Show me more
+              Discover Our Services
             </Button>
           </Stack>
         </Stack>

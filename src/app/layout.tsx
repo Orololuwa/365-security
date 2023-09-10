@@ -1,5 +1,4 @@
-// import Nav from "./components/nav/simple";
-import WithSubnavigation from "./components/nav/with-sub-nav";
+import Nav from "./components/nav/simple";
 import { Providers } from "./providers";
 
 export default function RootLayout({
@@ -11,8 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <WithSubnavigation />
-          {/* <Nav /> */}
+          <Nav />
           {children}
         </Providers>
       </body>

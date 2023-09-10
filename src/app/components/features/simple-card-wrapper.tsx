@@ -68,11 +68,11 @@ export default function SimpleCardWrapper() {
     <Box px="10" py="20">
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-          Short heading
+          Our Trusted Clientele
         </Heading>
         <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          obcaecati ut cupiditate pariatur, dignissimos, placeat amet officiis.
+          From the aviation sector to special events, we proudly serve a diverse
+          range of clients. Discover who trusts 365 Security.
         </Text>
       </Stack>
 
